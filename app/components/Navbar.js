@@ -16,75 +16,77 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300  ${
-        isScrolled ? 'bg-white shadow-md border-b border-gray-100' : ''
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-white shadow-md border-b border-gray-100' : 'bg-white'
       }`}
     >
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center'>
-        {/* Logo */}
-        <Link href='/' className='flex items-center space-x-2'>
-          <Image
-            src='/logo.jpg'
-            alt='Logo'
-            width={200}
-            height={200}
-            objectFit='cover'
-            className=''
-          />
-        </Link>
-
-        {/* Desktop Navigation */}
-        <div className='hidden md:flex items-center space-x-10'>
-          <Link
-            href='#home'
-            className='text-gray-700 hover:text-sky-600 text-sm font-medium tracking-wide uppercase transition-colors duration-200'
-          >
-            Home
-          </Link>
-          <Link
-            href='#about'
-            className='text-gray-700 hover:text-sky-600 text-sm font-medium tracking-wide uppercase transition-colors duration-200'
-          >
-            About
-          </Link>
-          <Link
-            href='#services'
-            className='text-gray-700 hover:text-sky-600 text-sm font-medium tracking-wide uppercase transition-colors duration-200'
-          >
-            Services
-          </Link>
-          <Link
-            href='#contact'
-            className='text-gray-700 hover:text-sky-600 text-sm font-medium tracking-wide uppercase transition-colors duration-200'
-          >
-            Contact
-          </Link>
-        </div>
-
-        {/* Mobile Hamburger */}
-        <button
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className='md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sky-500'
-          aria-label='Toggle mobile menu'
-        >
-          <svg
-            className='h-6 w-6 text-gray-700'
-            fill='none'
-            stroke='currentColor'
-            viewBox='0 0 24 24'
-          >
-            <path
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth='2'
-              d={
-                isMobileMenuOpen
-                  ? 'M6 18L18 6M6 6l12 12'
-                  : 'M4 6h16M4 12h16m-7 6h7'
-              }
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='flex items-center justify-between h-16'>
+          {' '}
+          {/* Fixed height container */}
+          {/* Logo */}
+          <Link href='/' className='flex items-center space-x-2'>
+            <Image
+              src='/logo.jpg'
+              alt='Logo'
+              width={120} // Reduced size for better fit
+              height={40} // Adjusted aspect ratio
+              className='object-contain' // Changed to object-contain
+              priority // Improves loading performance
             />
-          </svg>
-        </button>
+          </Link>
+          {/* Desktop Navigation */}
+          <div className='hidden md:flex items-center space-x-10'>
+            <Link
+              href='#home'
+              className='text-gray-700 hover:text-sky-600 text-sm font-medium tracking-wide uppercase transition-colors duration-200'
+            >
+              Home
+            </Link>
+            <Link
+              href='#about'
+              className='text-gray-700 hover:text-sky-600 text-sm font-medium tracking-wide uppercase transition-colors duration-200'
+            >
+              About
+            </Link>
+            <Link
+              href='#services'
+              className='text-gray-700 hover:text-sky-600 text-sm font-medium tracking-wide uppercase transition-colors duration-200'
+            >
+              Services
+            </Link>
+            <Link
+              href='#contact'
+              className='text-gray-700 hover:text-sky-600 text-sm font-medium tracking-wide uppercase transition-colors duration-200'
+            >
+              Contact
+            </Link>
+          </div>
+          {/* Mobile Hamburger */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className='md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sky-500'
+            aria-label='Toggle mobile menu'
+          >
+            <svg
+              className='h-6 w-6 text-gray-700'
+              fill='none'
+              stroke='currentColor'
+              viewBox='0 0 24 24'
+            >
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth='2'
+                d={
+                  isMobileMenuOpen
+                    ? 'M6 18L18 6M6 6l12 12'
+                    : 'M4 6h16M4 12h16m-7 6h7'
+                }
+              />
+            </svg>
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}

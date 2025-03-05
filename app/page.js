@@ -40,7 +40,7 @@ export default function Home() {
       {/* Hero Section */}
       <section
         id='home'
-        className='relative min-h-screen flex items-center justify-center text-white text-center overflow-hidden'
+        className='relative min-h-[calc(100vh-64px)] pt-16 flex items-center justify-center text-white text-center overflow-hidden'
       >
         {/* Background Image */}
         <Image
@@ -49,68 +49,67 @@ export default function Home() {
           fill
           priority
           className='object-cover object-center brightness-75'
-          quality={90}
+          quality={85}
         />
 
-        {/* Dark Overlay */}
-        <div className='absolute inset-0 bg-black/50' />
+        {/* Gradient Overlay */}
+        <div className='absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70' />
 
         {/* Content Container */}
-        <div className='relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
+        <div className='relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20'>
           {/* Top Section */}
-          <div className='mb-12'>
-            <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight drop-shadow-lg'>
-              Trademaster Insurance Brokers
+          <div className='mb-10 md:mb-14'>
+            <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight drop-shadow-xl'>
+              Trademaster Insurance
             </h1>
-            <p className='text-lg sm:text-xl md:text-2xl lg:text-3xl mt-4 font-medium text-gray-100 drop-shadow-md max-w-3xl mx-auto'>
+            <p className='text-base sm:text-lg md:text-xl lg:text-2xl mt-4 md:mt-6 font-medium text-gray-100 drop-shadow-lg max-w-3xl mx-auto'>
               Your Trusted Partner in Risk Management and Protection
             </p>
           </div>
 
           {/* Value Propositions */}
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12'>
-            <div className='bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300'>
-              <h3 className='text-xl font-semibold mb-2 tracking-wide text-white'>
-                Tailored Solutions
-              </h3>
-              <p className='text-sm text-gray-200 leading-relaxed'>
-                Customized insurance plans designed to meet your unique business
-                and personal needs.
-              </p>
-            </div>
-            <div className='bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300'>
-              <h3 className='text-xl font-semibold mb-2 tracking-wide text-white'>
-                Risk Expertise
-              </h3>
-              <p className='text-sm text-gray-200 leading-relaxed'>
-                Comprehensive risk management strategies backed by years of
-                industry experience.
-              </p>
-            </div>
-            <div className='bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300'>
-              <h3 className='text-xl font-semibold mb-2 tracking-wide text-white'>
-                24/7 Support
-              </h3>
-              <p className='text-sm text-gray-200 leading-relaxed'>
-                Dedicated assistance whenever you need it, ensuring peace of
-                mind at all times.
-              </p>
-            </div>
+            {[
+              {
+                title: 'Tailored Solutions',
+                desc: 'Customized insurance plans designed for your unique needs.',
+              },
+              {
+                title: 'Risk Expertise',
+                desc: 'Proven strategies backed by deep industry knowledge.',
+              },
+              {
+                title: '24/7 Support',
+                desc: 'Round-the-clock assistance for your peace of mind.',
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className='bg-white/15 backdrop-blur-lg rounded-xl p-6 border border-white/25 hover:bg-white/25 hover:border-white/40 transition-all duration-300 ease-in-out'
+              >
+                <h3 className='text-lg md:text-xl font-semibold mb-2 tracking-wide text-white'>
+                  {item.title}
+                </h3>
+                <p className='text-sm md:text-base text-gray-100 leading-relaxed'>
+                  {item.desc}
+                </p>
+              </div>
+            ))}
           </div>
 
           {/* Call-to-Action Buttons */}
-          <div className='flex flex-col sm:flex-row justify-center gap-4'>
+          <div className='flex flex-col sm:flex-row justify-center gap-4 md:gap-6'>
             <Link
               href='#contact'
-              className='inline-block bg-sky-500 hover:bg-sky-700 text-white py-3.5 px-10 rounded-full text-base sm:text-lg font-semibold shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 ease-in-out border border-sky-500/40'
+              className='inline-block bg-sky-600 hover:bg-sky-700 text-white py-3 px-8 md:py-4 md:px-10 rounded-full text-base md:text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 ease-in-out'
             >
-              Get a Quote Now
+              Get a Quote
             </Link>
             <Link
               href='#services'
-              className='inline-block bg-transparent hover:bg-white/10 text-white py-3.5 px-10 rounded-full text-base sm:text-lg font-semibold border border-white/30 hover:border-white/50 transition-all duration-300 ease-in-out'
+              className='inline-block bg-transparent hover:bg-white/20 text-white py-3 px-8 md:py-4 md:px-10 rounded-full text-base md:text-lg font-semibold border border-white/40 hover:border-white/60 hover:shadow-md transition-all duration-300 ease-in-out'
             >
-              Explore Services
+              Our Services
             </Link>
           </div>
         </div>
