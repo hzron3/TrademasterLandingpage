@@ -16,22 +16,20 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white shadow-md border-b border-gray-100'
-          : 'bg-transparent'
+      className={`fixed top-0 w-full z-50 transition-all duration-300  ${
+        isScrolled ? 'bg-white shadow-md border-b border-gray-100' : ''
       }`}
     >
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center'>
         {/* Logo */}
         <Link href='/' className='flex items-center space-x-2'>
           <Image
-            src='/trademasterlog.jpg'
+            src='/logo.jpg'
             alt='Logo'
-            width={40}
-            height={40}
-            objectFit='contain'
-            className='h-10 w-auto '
+            width={200}
+            height={200}
+            objectFit='cover'
+            className=''
           />
         </Link>
 
@@ -39,25 +37,25 @@ const Navbar = () => {
         <div className='hidden md:flex items-center space-x-10'>
           <Link
             href='#home'
-            className='text-gray-700 hover:text-blue-600 text-sm font-medium tracking-wide uppercase transition-colors duration-200'
+            className='text-gray-700 hover:text-sky-600 text-sm font-medium tracking-wide uppercase transition-colors duration-200'
           >
             Home
           </Link>
           <Link
             href='#about'
-            className='text-gray-700 hover:text-blue-600 text-sm font-medium tracking-wide uppercase transition-colors duration-200'
+            className='text-gray-700 hover:text-sky-600 text-sm font-medium tracking-wide uppercase transition-colors duration-200'
           >
             About
           </Link>
           <Link
             href='#services'
-            className='text-gray-700 hover:text-blue-600 text-sm font-medium tracking-wide uppercase transition-colors duration-200'
+            className='text-gray-700 hover:text-sky-600 text-sm font-medium tracking-wide uppercase transition-colors duration-200'
           >
             Services
           </Link>
           <Link
             href='#contact'
-            className='text-gray-700 hover:text-blue-600 text-sm font-medium tracking-wide uppercase transition-colors duration-200'
+            className='text-gray-700 hover:text-sky-600 text-sm font-medium tracking-wide uppercase transition-colors duration-200'
           >
             Contact
           </Link>
@@ -66,7 +64,7 @@ const Navbar = () => {
         {/* Mobile Hamburger */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className='md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500'
+          className='md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sky-500'
           aria-label='Toggle mobile menu'
         >
           <svg
@@ -95,28 +93,28 @@ const Navbar = () => {
           <div className='px-4 py-6 space-y-4'>
             <Link
               href='#home'
-              className='block py-2 px-4 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md text-base font-medium transition-colors duration-200'
+              className='block py-2 px-4 text-gray-700 hover:text-sky-600 hover:bg-gray-50 rounded-md text-base font-medium transition-colors duration-200'
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Home
             </Link>
             <Link
               href='#about'
-              className='block py-2 px-4 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md text-base font-medium transition-colors duration-200'
+              className='block py-2 px-4 text-gray-700 hover:text-sky-600 hover:bg-gray-50 rounded-md text-base font-medium transition-colors duration-200'
               onClick={() => setIsMobileMenuOpen(false)}
             >
               About
             </Link>
             <Link
               href='#services'
-              className='block py-2 px-4 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md text-base font-medium transition-colors duration-200'
+              className='block py-2 px-4 text-gray-700 hover:text-sky-600 hover:bg-gray-50 rounded-md text-base font-medium transition-colors duration-200'
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Services
             </Link>
             <Link
               href='#contact'
-              className='block py-2 px-4 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md text-base font-medium transition-colors duration-200'
+              className='block py-2 px-4 text-gray-700 hover:text-sky-600 hover:bg-gray-50 rounded-md text-base font-medium transition-colors duration-200'
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact

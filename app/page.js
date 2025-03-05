@@ -136,7 +136,7 @@ export default function Home() {
                     className='object-contain group-hover:scale-105 transition-transform duration-300'
                   />
                 </div>
-                <h3 className='text-xl font-semibold mb-3 text-gray-900 group-hover:text-blue-600 transition-colors duration-200'>
+                <h3 className='text-xl font-semibold mb-3 text-gray-900 group-hover:text-sky-600 transition-colors duration-200'>
                   {service.title}
                 </h3>
                 <p className='text-gray-600 text-sm leading-relaxed'>
