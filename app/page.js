@@ -11,7 +11,7 @@ export default function Home() {
         className='relative h-screen flex flex-col items-center justify-center text-white text-center overflow-hidden'
       >
         <Image
-          src='/trademaster.jpg'
+          src='/trademaster1.webp'
           alt='Trademaster Insurance Brokers Hero Image'
           fill
           priority
@@ -44,7 +44,8 @@ export default function Home() {
         <div className='relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10'>
           <div className='mb-6 sm:mb-8 lg:mb-10'>
             <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight leading-tight drop-shadow-xl'>
-              Trademaster Insurance
+              Trademaster Insurance <br />
+              Brokers
             </h1>
             <p className='text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mt-2 sm:mt-3 md:mt-4 font-medium text-gray-100 drop-shadow-lg max-w-3xl mx-auto'>
               Your Trusted Partner in Risk Management and Protection
