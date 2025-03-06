@@ -28,7 +28,7 @@ export default function Home() {
                 <Image
                   src='/logo.jpg'
                   alt='Logo'
-                  width={400}
+                  width={350}
                   height={32}
                   className='object-contain hover:opacity-90 transition-opacity duration-200 rounded-lg w-40 sm:w-52 md:w-64 lg:w-80 xl:w-96'
                   priority
@@ -71,7 +71,7 @@ export default function Home() {
                 key={index}
                 className='bg-white/15 backdrop-blur-lg rounded-xl p-4 sm:p-5 lg:p-6 border border-white/25 hover:bg-white/25 hover:border-white/40 transition-all duration-300 ease-in-out'
               >
-                <h3 className='text-base sm:text-lg md:text-xl font-semibold mb-1 sm:mb-2 tracking-wide text-white'>
+                <h3 className='text-base sm:text-lg md:text-xl font-semibold mb-1 sm:mb-2 tracking-wide text-'>
                   {item.title}
                 </h3>
                 <p className='text-xs sm:text-sm md:text-base text-gray-100 leading-relaxed'>
